@@ -48,9 +48,11 @@ use its functions like any other header program. All functions return double flo
 
 5. DegTrig contains structs and functions. The two new structs are vector2d and vector3d, the names are self explanatory: vector2d holds x,y coordinates, while vector3d holds x,y,z coordinates. 
 
-The following is the list of functions included in the current release of degtrig.h : 
+The following is the list of functions included in the current release of degtrig.h in the style of 
+returntype function_name(inputtype input);
 
-==========================================================================================================
+====================================================================
+
 double find_radians(double degrees); //input degrees to get radians.
 double find_degrees(double radians); //input radians to get degrees.
 
@@ -91,9 +93,13 @@ vector2d deg_vector2d(double length, double degrees); //takes vector parameters 
 
 vector3d deg_vector3d(double length, double theta, double phi); //takes vector parameters to make a 3D vector
 
+double deg_normalize(double deg); //input an angle in degrees to normalize it (take an angle out of the bounds of 0-360 and translate it to an angle within the bounds of 0-360). *note: normalization is not required for the functions of DegTrig to work, but it does make angles easier for humans to read.
 
-double deg_normalize(double deg); //input an angle in degrees to normalize it (take an angle out of the bounds of 0-360 and translate it to an angle within the bounds of 0-360). *note: normalization is not required for the functions of DegTrig to work, but it does make angles easier for humans to read. 
-==========================================================================================================
+=============================================================================================
+
+
+
+
 
 6. DegTrig is under the MIT liscence, as detailed in the LISCENCE file included in the project folder. 
 
